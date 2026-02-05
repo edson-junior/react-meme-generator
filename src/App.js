@@ -14,8 +14,8 @@ export default function App() {
     event.preventDefault();
 
     const formData = new FormData(event.target);
-    const topTexInputtValue = formData.get('top-text');
-    const bottomTextInputValue = formData.get('bottom-text');
+    const topTexInputtValue = formData.get('top-text').replace(' ', '_');
+    const bottomTextInputValue = formData.get('bottom-text').replace(' ', '_');
     const memeTemplateInputValue = formData.get('meme-template');
 
     let topText = '';
