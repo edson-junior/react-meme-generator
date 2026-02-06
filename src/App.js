@@ -10,6 +10,11 @@ export default function App() {
     `${MEME_TEMPLATE_URL}/${DEFAULT_IMAGE}.jpg`,
   );
 
+  /**
+   * submit the form and update image
+   *
+   * @param {FormDataEvent} event
+   */
   function handleSubmit(event) {
     event.preventDefault();
 
@@ -73,6 +78,12 @@ export default function App() {
   );
 }
 
+/**
+ * display meme image
+ *
+ * @param {URL} imageUrl
+ *
+ */
 function MemeImage({ imageUrl }) {
   return (
     <div className="meme-wrapper">
