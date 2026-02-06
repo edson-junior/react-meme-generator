@@ -7,7 +7,7 @@ const DEFAULT_IMAGE = 'aag';
 
 export default function App() {
   const [imageUrl, setImageUrl] = useState(
-    `${MEME_TEMPLATE_URL}/${DEFAULT_IMAGE}`,
+    `${MEME_TEMPLATE_URL}/${DEFAULT_IMAGE}.jpg`,
   );
 
   function handleSubmit(event) {
@@ -40,7 +40,9 @@ export default function App() {
       memeTemplate = `/${memeTemplateInputValue}`;
     }
 
-    setImageUrl(`${MEME_TEMPLATE_URL}${memeTemplate}${topText}${bottomText}`);
+    setImageUrl(
+      `${MEME_TEMPLATE_URL}${memeTemplate}${topText}${bottomText}.jpg`,
+    );
   }
 
   return (
